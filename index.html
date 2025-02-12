@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonWalk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(46, 53, 59);
+        }
+
+        .div1 {
+            background-color: burlywood;
+            width: 30rem;
+            height: 30rem;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            animation: bcgs 4s ease-in-out infinite;
+        }
+
+        .div2 {
+            background-color: rgb(255, 222, 125);
+            width: 15rem;
+            height: 15rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 15rem;
+                height: 15rem;
+                background-color: #000;
+                border-radius: 50%;
+                animation: moonwalk 4s ease-in-out infinite;
+            }
+        }
+
+        @keyframes moonwalk {
+            0% {
+                translate: 100%;
+                scale: 1;
+            }
+
+            50% {
+                translate: 0%;
+                scale: 0.95;
+            }
+
+            100% {
+                translate: -100%;
+                scale: 1;
+            }
+        }
+
+        @keyframes bcgs {
+            0% {
+                background-color: burlywood;
+            }
+
+            50% {
+                background-color: #000;
+            }
+
+            100% {
+                background-color: burlywood;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div1">
+        <div class="div2"></div>
+    </div>
+</body>
+
+</html>
