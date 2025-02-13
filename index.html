@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,18 +12,18 @@
         }
 
         body {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            /* width: 100vw; */
+            /* height: 100vh; */
+            display: grid;
+            place-items: center;
             background-color: rgb(46, 53, 59);
         }
 
         .div1 {
+            margin-top: 4rem;
             background-color: burlywood;
-            width: 30rem;
-            height: 30rem;
+            width: 25rem;
+            height: 25rem;
             aspect-ratio: 1;
             display: flex;
             justify-content: center;
@@ -35,8 +34,8 @@
 
         .div2 {
             background-color: rgb(255, 222, 125);
-            width: 15rem;
-            height: 15rem;
+            width: 12.5rem;
+            height: 12.5rem;
             aspect-ratio: 1;
             border-radius: 50%;
             position: relative;
@@ -49,8 +48,8 @@
             &::after {
                 content: "";
                 position: absolute;
-                width: 15rem;
-                height: 15rem;
+                width: 12.5rem;
+                height: 12.5rem;
                 background-color: #000;
                 border-radius: 50%;
                 animation: moonwalk 4s ease-in-out infinite;
@@ -87,6 +86,7 @@
                 background-color: burlywood;
             }
         }
+
         footer {
             position: absolute;
             bottom: 0%;
@@ -100,6 +100,52 @@
             color: rgb(114, 84, 89);
             font-weight: 900;
             letter-spacing: 1.5px;
+        }
+
+        @media (max-width: 768px) {
+            .div1 {
+                width: 20rem;
+                height: 20rem;
+            }
+
+            .div2 {
+                width: 10rem;
+                height: 10rem;
+
+                &::after {
+                    content: "";
+                    width: 10rem;
+                    height: 10rem;
+                }
+
+                .love {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            .div1 {
+                width: 16rem;
+                height: 16rem;
+                margin-top: 10rem;
+
+            }
+
+            .div2 {
+                width: 8rem;
+                height: 8rem;
+
+                &::after {
+                    content: "";
+                    width: 8rem;
+                    height: 8rem;
+                }
+            }
+
+            .love {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
